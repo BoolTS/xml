@@ -32,10 +32,10 @@ export class XmlTag {
         const { tagName, data, properties } = this.__initializer;
 
         let textOfProperties = "";
-        let textOfChilds = data ?? "";
+        let textOfChilds = data || "";
 
         // Generate properties
-        const propertyEntries = Object.entries(properties ?? {});
+        const propertyEntries = Object.entries(properties || {});
 
         if (propertyEntries.length > 0) {
             const propertyTextCollection = [];
